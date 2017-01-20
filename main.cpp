@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 				printf("Word '%s' on line number %d is too long. \n", tempStr, numLine);
 				exit(1);	
 			}
-		} else if (isspace(c) || isExAcceptableChar(c)) { 
+		} else if (isspace(c) || isAcceptableChar(c)) { 
 			charCount = 0;
 		} else {
 			printf("Invalid character '%c' at line %d. \n", c, numLine);
@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 
 	/*---------Begin Job-------------*/
 	// At this time, the file is good. Now let scanner.c do the work
-	TokenType tokenType = UNDEF;
+	cWd_TokenType aTokenType = UNDEF;
 	
 	// Token token; 
 	// token.tokenType = tokenType;
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
 	// token.lineNum = -1;
 	// while ((token.tokenType = getTokenType(filePtr, &token)) != EOT) {}
 	
-	while ((tokenType = getTokenType(filePtr)) != EOT) {}
+	while ((aTokenType = getTokenType(filePtr)) != EOT) {}
 	
 	/*---------/End Job-------------*/
 

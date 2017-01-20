@@ -34,9 +34,9 @@ char delims[LIMIT]; // to store delimiters
 int delimi = 0;
 int delimLineNums[LIMIT];
 
-char otherOps[LIMIT]; // to store other operators
-int otherOpi = 0;
-int otherOpLineNums[LIMIT];
+char mathOps[LIMIT]; // to store math operators
+int mathOpi = 0;
+int mathOpLineNums[LIMIT];
 
 char relOps[LIMIT][MAX]; // to store keywords
 int relOpi = 0, relOpj = 0;
