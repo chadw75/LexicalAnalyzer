@@ -1,0 +1,16 @@
+CC	= g++
+PROG	= cWd_Lexer 
+
+$(PROG): main.o cWd_Lexer.o
+	$(CC) -o $(PROG) main.o cWd_Lexer.o
+
+driveScanner.o : main.cpp cWd-Token.hpp cWd_Lexer.hpp
+	$(CC) -c main.cpp
+
+scanner.o : cWd_Lexer.cpp cWd_Token.hpp cWd_Lexer.hpp cWd_SymbolDefinitions.hpp
+	$(CC) -c cWd_Lexer.cpp
+
+.PHONY: clean
+
+clean:
+	/usr/bin/rm -rf core $(PROG) *.o
